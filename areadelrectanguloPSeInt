@@ -1,0 +1,9 @@
+Proceso sin_titulo
+	Escribir "Ingresar Base:"
+	Leer Base
+	Escribir "Ingresar Altura:"
+	Leer Altura
+	Area<-Base*Altura
+	Escribir "El Area es: " Area
+
+FinProceso
