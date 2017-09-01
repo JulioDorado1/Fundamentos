@@ -1,0 +1,15 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main ()
+{
+	float a, b, x;
+	cout<<"Ingrese la altura: ";
+	cin>>a;
+	cout<<"Ingrese la base: ";
+	cin>>b;
+	(x=a*b/2);
+		cout<<"El area es: "<<x<<endl;
+		getch();
+}
