@@ -1,0 +1,21 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main () {
+	float m, a, b, c;
+	cout<< "Ingrese el presupuesto anual: ";
+	cin>>m;
+	if (m>2000000)
+    {a=m*0.25;
+	b=m*0.35;
+	c=m*0.25;}
+		else
+	{a=m*0.3;
+	b=m*0.4;
+	c=m*0.3;}
+		cout<<"El presupuesto para Maternidad es: "<<a<<endl;
+		cout<<"El presupuesto para Traumatologia es: "<<b<<endl;
+		cout<<"El presupuesto para Pediatria es: "<<c<<endl;
+	getch();
+}
