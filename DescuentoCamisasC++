@@ -1,0 +1,17 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main () {
+	float p, c, d;
+	cout<<"Ingrese la cantidad de camisas: ";
+	cin>>c;
+	cout<<"Ingrese el precio de las camisas: ";
+	cin>>p;
+	if (c>=3)
+		d=p*0.8;
+	else
+		d=p*0.9;
+	cout<<"El precio con descuento es: "<<d;
+	getch();
+}
