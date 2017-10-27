@@ -1,0 +1,32 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+ 
+ using namespace std;
+ float suma_serie_factorial(float x, int n)
+	 {
+	 float S, F=2, P=2, signo=-1, I=2, fact, i=1;
+	 S=3.14159/5+(signo*pow(x, P)/F);
+	 while (P<n) {
+		 signo=signo*(-1);
+		 P=P+2;
+		 I=I+2;
+		 i=i+2;
+		 fact=F*i;
+		 F=fact*I;
+		 S=S+(signo*pow(x, P)/F);
+	 }
+	 return S;
+ }
+ int main() {
+	 float X, S;
+	 int N;
+	  cout<<"Ingrese un numero real: ";
+	  cin>>X;
+	  cout<<"Ingrese un numero entero: ";
+	  cin>>N;
+	  S=suma_serie_factorial(X, N);
+	  cout<<"La suma es: "<<S<<endl;
+	  getch ();
+ }
