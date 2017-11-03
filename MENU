@@ -24,6 +24,8 @@ void main() {
 	cout<<"4. Pregunta 3"<<endl;
 	cout<<"5. Pregunta 4"<<endl;
 	cout<<"0. Salir"<<endl;
+	cout<<"Ingrese una opcion: ";
+	cin>>n;
 	switch (n) {
 	case 1: pregunta1a(); break;
 	case 2: pregunta1b(); break;
