@@ -1,0 +1,152 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+void pregunta1a();
+void pregunta1b();
+void pregunta2();
+void pregunta3();
+void pregunta4();
+int multiplo(int x, int y);
+float precio(float distancia, int dias);
+float suma_factorial(float x, int n);
+int suma_pares(int w);
+
+using namespace std;
+void main() {
+	int n;
+	do {
+	cout<<"MENU"<<endl;
+	cout<<"1. Pregunta 1a"<<endl;
+	cout<<"2. Pregunta 1b"<<endl;
+	cout<<"3. Pregunta 2"<<endl;
+	cout<<"4. Pregunta 3"<<endl;
+	cout<<"5. Pregunta 4"<<endl;
+	cout<<"0. Salir"<<endl;
+	switch (n) {
+	case 1: pregunta1a(); break;
+	case 2: pregunta1b(); break;
+    case 3: pregunta2(); break;
+	case 4: pregunta3(); break;
+    case 5: pregunta4(); break;
+	case 0: break; }
+	}
+    while (n!=0);
+	getch ();
+}
+
+void pregunta1a() {
+	int x, y;
+	cout<<"Ingrese el primer numero: ";
+	cin>>x;
+	cout<<"Ingrese el segundo numero: ";
+	cin>>y;
+	if (multiplo(x, y)==true)
+		cout<<"Es multiplo";
+	else 
+		cout<<"No es multiplo";
+	getch();
+}
+int multiplo(int x, int y){
+	bool flag;
+	if (x>y){
+		if (x%y==0)
+			flag=true;
+		else
+			flag=false;
+	}
+	else 
+		if (y%x==0)
+			flag=true;
+		else
+			flag=false;
+	return flag;
+}
+
+void pregunta1b() {
+    int x, y;
+	bool flag;
+	cout<<"Ingrese el primer numero: ";
+	cin>>x;
+	cout<<"Ingrese el segundo numero: ";
+	cin>>y;
+	if (x>y) {
+		if (x%y == 0)
+			flag=1;
+		else 
+			flag=0;
+	}
+	else 
+		if (y%x == 0)
+			flag=1;
+		else
+			flag=0;
+	if (flag=1)
+	    cout<<"Es divisible";
+	else
+		cout<<"No es divisible";
+	getch();
+}
+
+void pregunta2(){
+	int dias;
+	float dis, P;
+	cout<<"Ingrese la distacia: ";
+	cin>>dis;
+	cout<<"Ingrese los dias: ";
+	cin>>dias;
+	P=precio(dis, dias);
+	cout<<"El precio es: "<<P;
+	getch();
+}
+float precio(float distancia, int dias){
+	float precio;
+	if (distancia>500 && dias>7)
+		precio=distancia*0.57*0.25;
+	else
+		precio=distancia*0.57;
+	return precio;
+}
+
+void pregunta3() {
+	float S, x;
+	int n;
+	cout<<"Ingrese un numero real: ";
+	cin>>x;
+	cout<<"Ingrese un numero entero: ";
+	cin>>n;
+	S=suma_factorial(x, n);
+	cout<<"La suma es: "<<S;
+	getch();
+}
+float suma_factorial(float x, int n){
+	float s, I=0, F=1, P=0, signo=1;
+	s=2.71+x;
+	while (P<n)
+		P=P+1;
+	    signo=signo*-1;
+		I=I+1;
+		F=F*I;
+		s=s+(signo*pow(x, P)/F);
+		return s;
+}
+
+void pregunta4(){
+	int w, s;
+	cout<<"Ingrese un numero entero: ";
+	cin>>w;
+	s=suma_pares(w);
+	cout<<"La suma de los pares es: "<<s;
+	getch();
+}
+int suma_pares(int w){
+	int S=0, d;
+	while (w>0)
+		d=w%10;
+	    if (d%2==0){
+			S=S+d;
+		}
+		w=w/10;
+   return S;
+}
